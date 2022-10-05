@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/**
+ * main - Veremos el tamaño de bits
+ * Return: Retornamos 0.
+ */
 int main(void)
 {
 	printf("Size of a char: %ld byte(s)\n", sizeof(char));
