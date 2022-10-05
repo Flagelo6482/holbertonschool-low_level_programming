@@ -4,6 +4,11 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ *main - Primer ejercicio de
+ *        if, else if y else.
+ *Return: Retornara 0.
+ */
 int main(void)
 {
 	int n;
