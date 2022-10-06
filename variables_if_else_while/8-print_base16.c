@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - Ejecutaremos un programa que imprima
+ *        "0123456789abcdef"
+ * Return: 0
+ */
 int main(void)
 {
 	int x;
