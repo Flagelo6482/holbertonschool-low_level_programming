@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int a = 20;
+	int b = 10;
+	int age;
+
+	age = a - b;
+	printf("%d\n", age);
+	age = abs(age);
+	printf("%d\n", age);
+
+	return (0);
+}
