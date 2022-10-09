@@ -9,37 +9,18 @@
 
 int print_last_digit(int a)
 {
-	int re;
 	int mo;
 
 	if (a >= 0)
 	{
-		if (a > 0)
-		{
-			re = a % 10;
-			return (re);
-		}
-		else
-		{
-			re = a % 10;
-			return (re);
-		}
+		mo = a % 10;
+		_putchar('0' + mo);
+		return (mo);
 	}
-	else if (a <= 0)
+	else
 	{
-		if (a < 0)
-		{
-			re = a % 10;
-			mo = re * -1;
-			return (mo);
-		}
-		else
-		{
-			re = a % 10;
-			mo = re * -1;
-			return (mo);
-		}
+		mo = a % 10;
+		_putchar('0' + (mo * -1));
+		return (mo);
 	}
-
-	return (0);
 }
