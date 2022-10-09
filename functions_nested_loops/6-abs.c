@@ -9,21 +9,28 @@
 
 int _abs(int a)
 {
-	if (a == -1)
+
+	if (a >= 0)
 	{
-		return (1);
+		if (a > 0)
+		{
+			return (a * 1);
+		}
+		else
+		{
+			return (a * 0);
+		}
 	}
-	else if (a == 0)
+	else if (a <= 0)
 	{
-		return (0);
-	}
-	else if (a == 1)
-	{
-		return (1);
-	}
-	else if (a == -98)
-	{
-		return (98);
+		if (a < 0)
+		{
+			return (a * -1);
+		}
+		else
+		{
+			return (a * 0);
+		}
 	}
 	return (0);
 
