@@ -11,15 +11,15 @@ int print_last_digit(int a)
 {
 	int mo;
 
-	if (a >= 0)
+	mo = a % 10;
+
+	if (mo >= 0)
 	{
-		mo = a % 10;
 		_putchar('0' + mo);
 		return (mo);
 	}
 	else
 	{
-		mo = a % 10;
 		_putchar('0' + (mo * -1));
 		return (mo);
 	}
