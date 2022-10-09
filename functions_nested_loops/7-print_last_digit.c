@@ -9,28 +9,20 @@
 
 int print_last_digit(int a)
 {
+	int re;
 
-	if (a >= 0)
+	if (a > 0)
 	{
-		if (a > 0)
-		{
-			return ((a * 1) % 10);
-		}
-		else
-		{
-			return ((a * 0) % 10);
-		}
+		re = a % 10;
+		return (re);
 	}
-	else if (a <= 0)
+	else if (a < 0)
 	{
-		if (a < 0)
-		{
-			return ((a * -1) % 10);
-		}
-		else
-		{
-			return ((a * 0) % 10);
-		}
+		re = (a * -1) % 10;
+		return (re);
 	}
-	return (0);
+	else
+	{
+		return (a);
+	}
 }
