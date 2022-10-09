@@ -10,19 +10,36 @@
 int print_last_digit(int a)
 {
 	int re;
+	int mo;
 
-	if (a > 0)
+	if (a >= 0)
 	{
-		re = a % 10;
-		return (re);
+		if (a > 0)
+		{
+			re = a % 10;
+			return (re);
+		}
+		else
+		{
+			re = a % 10;
+			return (re);
+		}
 	}
-	else if (a < 0)
+	else if (a <= 0)
 	{
-		re = (a * -1) % 10;
-		return (re);
+		if (a < 0)
+		{
+			re = a % 10;
+			mo = re * -1;
+			return (mo);
+		}
+		else
+		{
+			re = a % 10;
+			mo = re * -1;
+			return (mo);
+		}
 	}
-	else
-	{
-		return (a);
-	}
+
+	return (0);
 }
