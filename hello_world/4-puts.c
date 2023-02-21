@@ -2,7 +2,7 @@
 
 /**
  *main - Entry point
- *@puts: Imprime la cadena especificada,incluido un salto de linea
+ *
  *Return: Always 0
  */
 int main(void)
