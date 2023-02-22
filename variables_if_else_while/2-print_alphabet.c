@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 /**
  *main - Print the alphabet in lowercase
- *Description: Using the main function
- *Return - Always 0
+ *
+ *Return: Always 0
  */
-
 int main(void)
 {
 	int x;
