@@ -6,14 +6,16 @@
  */
 int main(void)
 {
-	int x;
+	int x = 0;
 
-	char nombre[] = "_putchar";
+	char c[] = "_putchar";
 
-	for (x = 0; x <= 8; x++)
+	while (x <= c[x] && c[x] != '\0')
 	{
-		_putchar(nombre[x]);
+		_putchar(c[x]);
+		x++;
 	}
+
 	_putchar(10);
 
 	return (0);
