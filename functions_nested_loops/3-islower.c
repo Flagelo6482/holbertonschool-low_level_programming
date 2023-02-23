@@ -4,9 +4,9 @@
  *
  *Return: 1 or 0
  */
-int _islower(int c)
+int _islower(int r)
 {
-	if (c >= 97 && c <= 122)
+	if (r >= 97 && r <= 122)
 	{
 		return (1);
 	}
