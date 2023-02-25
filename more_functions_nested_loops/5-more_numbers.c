@@ -15,13 +15,10 @@ void more_numbers(void)
 			mod = c % 10; /*Primer digito*/
 			div = c / 10; /*Segundo digito*/
 
-			if (c <= 9)
-				_putchar(mod + '0');
-			else
-			{
+			if (c > 9)
 				_putchar(div + '0');
-				_putchar(mod + '0');
-			}
+
+			_putchar(mod + '0');
 		}
 		_putchar(10);
 	}
