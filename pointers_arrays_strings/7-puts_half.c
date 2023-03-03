@@ -25,7 +25,7 @@ void puts_half(char *str)
 
 	else
 	{
-		mitad = (len - 1) / 2;
+		mitad = (len + 1) / 2;
 
 		while (str[mitad])
 		{
