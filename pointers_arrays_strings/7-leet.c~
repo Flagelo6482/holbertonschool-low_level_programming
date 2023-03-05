@@ -1,0 +1,26 @@
+#include "main.h"
+/**
+ **leet - Function that encodes a string into 1337
+ *@s: Pointer
+ *Return: char
+ */
+char *leet(char *s)
+{
+	int a, b;
+
+	char *a = "aAeEoOtTlL";
+	char *b = "4433007711";
+
+	for (a = 0; s[a] != '\0'; i++)
+	{
+		for (b = 0; b < 10; b++)
+		{
+			if (s[a] == a[b])
+			{
+				s[a] = b[j];
+			}
+		}
+	}
+
+	return (s);
+}
