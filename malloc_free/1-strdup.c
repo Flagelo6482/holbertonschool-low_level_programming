@@ -3,7 +3,8 @@
 #include "main.h"
 
 /**
- *_strdup - Function that returns a pointer to a newly allocated space in memory
+ *_strdup - Function that returns a pointer to a newly
+ *allocated space in memory
  *@str: Pointer
  *
  *Return: Char
@@ -20,7 +21,7 @@ char *_strdup(char *str)
 	while (str[len] != '\0')
 		len++;
 
-	array = (char*)malloc(sizeof(*array) * (len + 1));
+	array = malloc(sizeof(*array) * (len + 1));
 
 	if (str == NULL || i > len)
 		return (NULL);
