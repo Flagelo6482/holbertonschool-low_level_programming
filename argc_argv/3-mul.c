@@ -12,25 +12,25 @@
 
 int main(int argc, char *argv[])
 {
-	int i, mul;
+	int i, x, mul;
 
 	mul = 1;
+	x = 0;
 
 	for (i = 1; i < argc; i++)
 	{
 		mul *= atoi(argv[i]);
+		x++;
 	}
 
-	if (i == 1)
-	{
-		printf("%d\n", mul);
-	}
-
-	else
+	if (x < 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	else
+		printf("%d\n", mul);
 
 	return (0);
 }
