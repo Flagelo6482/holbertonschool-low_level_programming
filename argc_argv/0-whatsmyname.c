@@ -2,12 +2,14 @@
 #include "main.h"
 
 /**
- *Program that prints its name, followed by a new line
+ *main - Program that prints its name, followed by a new line
+ *@argc: Parameter Count
+ *@argv: Argument Count
  *
  *Return: Argv
  */
 
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
