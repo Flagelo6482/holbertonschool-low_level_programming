@@ -21,14 +21,16 @@ int main(int argc, char *argv[])
 		mul *= atoi(argv[i]);
 	}
 
-	if (i < 2)
+	if (i == 1)
+	{
+		printf("%d\n", mul);
+	}
+
+	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	else
-		printf("%d\n", mul);
 
 	return (0);
 }
