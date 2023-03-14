@@ -28,14 +28,14 @@ char *str_concat(char *s1, char *s2)
 	array = malloc(sizeof(*array) * (len1 + len2 + 1));
 
 	if (s1 == NULL)
-		return (s2);
+		return (*s2);
 
 	else if (s2 == NULL)
-		return (s1);
+		return (*s1);
 
 	else if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	
+
 	else
 	{
 		while (s1[i] != '\0')
