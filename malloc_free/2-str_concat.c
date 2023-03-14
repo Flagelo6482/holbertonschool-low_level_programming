@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 	i = 0;
 
 	if (s1 == NULL || s2 == NULL)
-	  s1 = s2 = "";
+		s1 = s2 = "";
 
 	while (s1[len1] != '\0')
 		len1++;
@@ -46,6 +46,6 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	array[len1] = '\0';
-	
+
 	return (array);
 }
