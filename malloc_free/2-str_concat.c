@@ -25,6 +25,9 @@ char *str_concat(char *s1, char *s2)
 
 	array = malloc(sizeof(char) * (len1 + len2 + 1));
 
+	if (array == NULL)
+		return (NULL);
+	
 	for (i = 0; i < len1; i++)
 		array[len1] = s1[i];
 
