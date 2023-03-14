@@ -28,7 +28,10 @@ char *str_concat(char *s1, char *s2)
 	array = malloc(sizeof(*array) * (len1 + len2 + 1));
 
 	if (s1 == NULL || s2 == NULL)
+	{
+		printf("%s\n", array);
 		return (NULL);
+	}
 
 	else
 	{
