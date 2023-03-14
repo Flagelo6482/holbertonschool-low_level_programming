@@ -28,10 +28,10 @@ char *str_concat(char *s1, char *s2)
 	array = malloc(sizeof(*array) * (len1 + len2 + 1));
 
 	if (s1 == NULL)
-		return (*s2);
+		return (array);
 
 	else if (s2 == NULL)
-		return (*s1);
+		return (array);
 
 	else if (s1 == NULL && s2 == NULL)
 		return (NULL);
