@@ -30,9 +30,6 @@ char *str_concat(char *s1, char *s2)
 
 	array = malloc(sizeof(*array) * (len1 + len2 + 1));
 
-	if (array == NULL || i > len)
-		return (NULL);
-
 	while (s1[i] != '\0')
 	{
 		array[i] = s1[i];
