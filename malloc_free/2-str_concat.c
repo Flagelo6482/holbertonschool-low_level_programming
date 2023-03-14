@@ -13,33 +13,36 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *array;
-	int len1, len2, i;
+	int i, concat, len;
 
-	if (s1 == NULL || s2 == NULL)
-		s1 = s2 = "";
+	concat = 0;
+	len = 0;
 
-	len1 = 0;
-	while (s1[len1] != '\0')
-		len1++;
+	if (s1 == NULL)
+		s1 = "";
 
-	len2 = 0;
-	while (s2[len2] != '\0')
-		len2++;
+	if (s2 == NULL)
+		s2 = "";
 
-	array = malloc(sizeof(char) * (len1 + len2 + 1));
+	for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
+		len++;
 
-	if (array == NULL)
+	array = malloc(sizeof(char) * len);
+
+	if (array ==  NULL)
 		return (NULL);
 
-	for (i = 0; i < len1; i++)
-		array[len1] = s1[i];
-
-	for (i = 0; i < len2; i++)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		array[len1] = s2[i];
-		len1++;
+		array[concat] = s1[i];
+		concat++;
 	}
-	array[len1] = '\0';
+	for (i = 0; s2[i] != '\0'; i++)
+	{
+		array[concat] = s2[i];
+		concat++;
+	}
+	array[concat] = '\0';
 
 	return (array);
 }
