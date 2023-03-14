@@ -33,20 +33,19 @@ char *str_concat(char *s1, char *s2)
 	if (array == NULL)
 		return (NULL);
 
-	while (s1[i] != '\0')
+	while (*s1)
 	{
-		array[i] = s1[i];
+		array[i] = *s1;
 		i++;
+		s1++;
 	}
 
-	i = 0;
-	while (s2[i] != '\0')
+	while (*s2)
 	{
-		array[len1] = s2[i];
-		len1++;
+		array[i] = *s2;
 		i++;
+		s2++;
 	}
-	array[len1] = '\0';
 
 	return (array);
 }
