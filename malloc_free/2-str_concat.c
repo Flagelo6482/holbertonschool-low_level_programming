@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 
 		for (i = 0; i < len2; i++)
 		{
-			array[len] = s2[i];
+			array[len1] = s2[i];
 			len1++;
 		}
 		array[len1] = '\0';
