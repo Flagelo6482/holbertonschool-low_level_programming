@@ -4,7 +4,7 @@
 /**
  *main - Program that prints its name, followed by a new line
  *@argc: Parameter Count
- *@argv: Argument Count
+ *@argv: Array argument
  *
  *Return: Argv
  */
