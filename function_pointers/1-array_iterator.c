@@ -19,13 +19,13 @@ void array_iterator(int *array, size_t size, void(*action)(int))
 
 	i = 0;
 
-	if (array[i] == '\0')
-		return;
+	/*if (array[i] == '\0')
+	  return;*/
 
 	if (*action == NULL)
 		return;
 
-	for (i = 0; i < size; i++)
+	for (; i < size; i++)
 	{
 		(*action)(array[i]);
 	}
