@@ -12,7 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, calc;
+	int a, b;
+	int *calc;
 	char *operator;
 
 	a = atoi(argv[1]);
