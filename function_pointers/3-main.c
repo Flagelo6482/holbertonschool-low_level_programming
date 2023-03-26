@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 
 	calc = (*get_op_func(operator))(a, b);
 
-	printf("%d\n", calc);
+	printf("%ls\n", calc);
 
 	return (0);
 }
