@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int a, b;
-	int calc;
+	int (*calc)(int, int);
 	char *operator;
 
 	a = atoi(argv[1]);
