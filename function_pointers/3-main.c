@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
 		return (100);
 	}
 
-	calc = (*get_op_func(operator))(a, b);
+	calc = (get_op_func(*operator))(a, b);
 
-	printf("%ls\n", calc);
+	printf("%d\n", calc);
 
 	return (0);
 }
