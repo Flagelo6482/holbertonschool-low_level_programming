@@ -13,8 +13,8 @@
 int main(int argc, char *argv[])
 {
 	int a, b;
-	int *calc;
-	char *operator;
+	int calc;
+	char operator;
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
