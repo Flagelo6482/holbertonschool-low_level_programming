@@ -12,8 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b;
-	int (*calc)(int, int);
+	int a, b, calc;
 	char *operator;
 
 	a = atoi(argv[1]);
@@ -38,7 +37,7 @@ int main(int argc, char *argv[])
 		return (100);
 	}
 
-	calc = (get_op_func(*operator))(a, b);
+	calc = (*get_op_func(*operator))(a, b);
 
 	printf("%d\n", calc);
 
