@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		return (98);
 	}
 
@@ -25,15 +25,16 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	operator = argv[2];
 
+
 	if ((argv[2][1]) != '\0')
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		return (99);
 	}
 
 	if ((atoi(operator) == '/' || atoi(operator) == '%') && (b == 0))
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		return (100);
 	}
 
