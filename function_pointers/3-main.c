@@ -12,9 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, calc;
+	int a, b;
 	char *operator;
-	int (*func)(int, int);
 
 	if (argc != 4)
 	{
@@ -38,9 +37,7 @@ int main(int argc, char *argv[])
 		return (100);
 	}
 
-	func = get_op_func(argv[2]);
-
-	printf("%d\n", calc);
+	printf("%d\n", (*get_op_func(operator))(a, b));
 
 	return (0);
 }
