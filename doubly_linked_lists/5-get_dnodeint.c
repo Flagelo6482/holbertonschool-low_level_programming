@@ -23,12 +23,5 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		i++;
 	}
 
-	if(!tmp->next)
-	{
-		return (tmp);
-	}
-	else
-	{
-		return (tmp);
-	}
+	return (tmp);
 }
