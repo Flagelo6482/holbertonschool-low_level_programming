@@ -35,10 +35,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 		idx--;
 	}
-	if (tmp_1->next == NULL)
+	if (!tmp_1)
 	{
-		tmp_1->next = nuevo;
+		*h = nuevo;
 		nuevo->prev = tmp_1;
+		nuevo->next = NULL;
 	}
 	else
 	{
