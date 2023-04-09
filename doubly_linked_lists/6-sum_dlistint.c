@@ -17,12 +17,18 @@ int sum_dlistint(dlistint_t *head)
 	dlistint_t *tmp = head;
 
 	if (tmp == NULL)
-		return (sum);
+		return (0);
 
-	while (tmp->next != NULL)
+	else
 	{
-		tmp = tmp->next;
 		sum += tmp->n;
+		tmp = tmp->next;
+
+		while (tmp)
+		{
+			sum += tmp->n;
+			tmp = tmp->next;
+		}
 	}
 
 	return (sum);
