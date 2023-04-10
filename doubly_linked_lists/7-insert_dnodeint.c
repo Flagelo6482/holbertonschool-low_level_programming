@@ -9,49 +9,48 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *nuevo, *tmp1, *tmp2;
+	dlistint_t *nuevo, *tmp = *h;
 
 	nuevo = malloc(sizeof(dlistint_t));
 
 	if (nuevo == NULL)
 		return (NULL);
 
-	nuevo->n = n;
-	tmp1 = *h;
 	if (idx == 0)
 	{
-		nuevo->next = tmp1;
-		tmp1->prev = nuevo;
+		nuevo->next = tmp;
+		tmp->prev = nuevo;
+		nuevo->n = n;
 		*h = nuevo;
+		return (nuevo);
 	}
-	else
+
+	while (idx != 1)
 	{
-		while (idx != 1)
-		{
-			if (!tmp1)
-			{
-				*h = nuevo;
-				nuevo->prev = NULL;
-				nuevo->next = NULL;
-				return (nuevo);
-			}
-			tmp1 = tmp1->next;
-			idx--;
-		}
-		if (!tmp1->next)
-		{
-			tmp1->next = nuevo;
-			nuevo->prev = tmp1;
-			nuevo->next = NULL;
-			return (nuevo);
-		}
-		tmp2 = tmp1->next;
-
-		tmp1->next = nuevo;
-		tmp2->prev = nuevo;
-
-		nuevo->prev = tmp1;
-		nuevo->next = tmp2;
+		tmp = tmp->next;
+		if (tmp == NULL)
+			return (NULL);
+		idx--;
 	}
+
+	if (tmp->next == NULL)
+	{
+		while (tmp->next != NULL)
+			tmp = tmp->next;
+
+		nuevo->prev = tmp;
+		nuevo->n = n;
+		nuevo->next = NULL;
+		tmp->next = nuevo;
+
+		return (nuevo);
+	}
+
+	nuevo->n = n;
+	nuevo->prev = tmp;
+	nuevo->next = tmp->next;
+	tmp->next->prev = nuevo;
+	tmp->next = nuevo;
+
 	return (nuevo);
 }
