@@ -19,23 +19,26 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 
 	if (filename == NULL)
-		return (STDIN_FILENO);
+		return (0);
 
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
-		return (STDIN_FILENO);
+		return (0);
 
 	fd = open(filename, O_RDONLY);
 
 	if (fd == -1)
 	{
 		close(fd);
-		return (STDIN_FILENO);
+		return (0);
 	}
 
 	total = read(fd, buffer, letters);
 
 	let_w = write(STDIN_FILENO, buffer, total);
+
+	if (let_w != total)
+		return (0);
 
 	close(fd);
 
