@@ -19,18 +19,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 
 	if (filename == NULL)
-		return (0);
+		return (STDIN_FILENO);
 
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
-		return (0);
+		return (STDIN_FILENO);
 
 	fd = open(filename, O_RDONLY);
 
 	if (fd == -1)
 	{
 		close(fd);
-		return (0);
+		return (STDIN_FILENO);
 	}
 
 	total = read(fd, buffer, letters);
