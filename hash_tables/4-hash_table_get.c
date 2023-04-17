@@ -27,12 +27,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	while (tmp && strcmp(tmp->key, key) != 0)
 		tmp = tmp->next;
 
-	if (tmp->value == NULL)
-	{
-		tmp->value = "(null)";
-		return (tmp->value);
-	}
-
-	else
-		return (tmp->value);
+	return ((node == NULL) ? NULL : node->value);
 }
