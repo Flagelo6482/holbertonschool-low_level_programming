@@ -1,6 +1,5 @@
 #ifndef FRANK_H
 #define FRANK_H
-#include <stdlib.h>
 
 #include <stdlib.h>
 #include <sys/types.h>
