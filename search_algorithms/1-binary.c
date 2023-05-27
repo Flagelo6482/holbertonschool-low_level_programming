@@ -2,6 +2,7 @@
 
 /**
  * print_array - Prints the array
+ *@array: Pointer to array
  *@low: Value
  *@upp: Value
  */
