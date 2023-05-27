@@ -2,8 +2,8 @@
 
 /**
  * print_array - Prints the array
- *@array: Pointer to array
- *@size: Array size
+ *@low: Value
+ *@upp: Value
  */
 void print_array(int *array, int low, int upp)
 {
