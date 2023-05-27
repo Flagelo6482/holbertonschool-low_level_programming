@@ -12,7 +12,7 @@ void print_array(int *array, int low, int upp)
 
 	while (low <= upp)
 	{
-		if (low == array[upp])
+		if (low == upp)
 		{
 			printf("%d\n", array[low]);
 			break;
